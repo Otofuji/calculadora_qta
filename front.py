@@ -5,7 +5,8 @@ from Tkinter import *
   
 
 class Application:
-    def __init__(self, master = None):
+    def __init__(self, master):
+    	self.master = master
         self.fontePadrao = ("Cairo", "14")
         self.primeiroContainer = Frame(master, bg = '#383428')
         self.primeiroContainer["pady"] = 20
@@ -67,7 +68,8 @@ class Application:
 
 
 class Application2:
-    def __init__(self, master = None):
+    def __init__(self, master):
+    	self.master = master
         self.fontePadrao = ("Cairo", "14")
         self.primeiroContainer = Frame(master, bg = '#383428')
         self.primeiroContainer["pady"] = 20
@@ -162,8 +164,8 @@ if __name__ == '__main__':
 '''  
 def main():
 	root = Tk()
-	app = Application(root)
 	root.title("Calculadora de CO2 equivalente")
+	app = Application(root)
 	root.configure(background='#383428')
 	windowWidth = root.winfo_reqwidth()
 	windowHeight = root.winfo_reqheight()
